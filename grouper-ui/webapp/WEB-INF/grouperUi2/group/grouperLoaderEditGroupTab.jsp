@@ -490,6 +490,11 @@ ${grouper:titleFromKeyAndText('groupLoaderPageTitle', grouperRequestContainer.gr
   	                            <span style="white-space: nowrap">
   		                          <input type="text" style="width: 20em" value="${grouper:escapeHtml(grouperRequestContainer.grouperLoaderContainer.editLoaderLdapSearchDn)}"
   		                              name="editLoaderLdapSearchDnName" id="editLoaderLdapSearchDnId" />
+  	                                <c:if test="${grouperRequestContainer.grouperLoaderContainer.editLoaderLdapType == 'LDAP_GROUP_LIST'
+  	                                    || grouperRequestContainer.grouperLoaderContainer.editLoaderLdapType == 'LDAP_SIMPLE'}">
+  	                                  <span class="requiredField" rel="tooltip" data-html="true" data-delay-show="200" data-placement="right" 
+  	                                    data-original-title="${textContainer.textEscapeDouble['grouperRequiredTooltip']}">*</span>
+  	                                </c:if>
   	                            </span>
   	                               
   	                            <br />
