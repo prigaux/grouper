@@ -481,7 +481,7 @@ public class XmlExportComposite {
 
     //addCompositeMember(CompositeType type, Group left, Group right)
     writer.write(" CompositeSave compositeSave = new CompositeSave(grouperSession).assignOwnerGroup(ownerGroup).assignCompositeType(compositeType)"
-        + ".assignLeftFactorGroup(leftFactorGroup).assignRightFactorGroup(rightFactorGroup); gshTotalObjectCount++; Composite composite = compositeSave.save(); "
+        + ".assignLeftFactorGroup(leftFactorGroup).assignRightFactorGroup(rightFactorGroup).assignType(\"group\"); gshTotalObjectCount++; Composite composite = compositeSave.save(); "
         + "if (compositeSave.getSaveResultType() != SaveResultType.NO_CHANGE) {System.out.println(\"Made change for composite: \" + composite.toString()); "
         + "gshTotalChangeCount++;} ");
 
