@@ -475,7 +475,7 @@ public class XmlExportMain {
       if (group != null) {
         String groupName = group.getName();
         
-        writer.write(subjectVariableName + " = SubjectFinder.findByIdentifierAndSource(\""
+        writer.write(subjectVariableName + "=null; " + subjectVariableName + " = SubjectFinder.findByIdentifierAndSource(\""
             + GrouperUtil.escapeDoubleQuotesSlashesAndNewlinesForString(groupName) 
             + "\", \"" + GrouperUtil.escapeDoubleQuotesSlashesAndNewlinesForString(sourceId) + "\", false);\n"); 
 
@@ -498,7 +498,7 @@ public class XmlExportMain {
 
         String subjectIdentifier = subject.getAttributeValue("identifier");
         
-        writer.write(subjectVariableName + " = SubjectFinder.findByIdentifierAndSource(\""
+        writer.write(subjectVariableName + "=null; " + subjectVariableName + " = SubjectFinder.findByIdentifierAndSource(\""
             + GrouperUtil.escapeDoubleQuotesSlashesAndNewlinesForString(subjectIdentifier) 
             + "\", ExternalSubject.sourceId(), false);\n"); 
   
